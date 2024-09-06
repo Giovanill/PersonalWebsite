@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giovani Giagnacovo - Projects</title>
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="aboutme.html">About Me</a>
+                </li>
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="contacts.html">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>
+                Projects
+            </h1>
+            <section class="projects">
+                <div class="project">
+                    <h2>Project 1: MCU PCB Design</h2>
+                    <div class="centered-image">
+                        <img src="images/pcb.png" alt="MCU PCB Design">
+                    </div>
+                    <p class="project-description">
+                        Designed and implemented a custom PCB featuring STM 32 ARM-Cortex Microcontroller for use in future electronics projects. The project involved schematic design, PCB layout, and custom component development. Click below to see the extensive project documentation.
+                    </p>
+                    <div class="button-container">
+                        <a href="project1-details.html" class="view-more-button">View More</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h2>Project 2: FPGA System Design Capstone</h2>
+                    <div class="centered-image">
+                        <img src="images/fpga.png" alt="FPGA System Design Capstone">
+                    </div>
+                    <p class="project-description">
+                        Developed VHDL code for a 4-bit adder and BCD display to validate the DE10-Lite FPGA functionality. Designed a PWM module and combined it with an ADC to create a voltmeter system on the FPGA. Additionally, I engineered the hardware architecture for a custom Nios II system, all accomplished using Quartus Prime.
+                    </p>
+                    <div class="button-container">
+                        <a href="project2-details.html" class="view-more-button">View More</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h2>Project 3: Single Cycle Processor</h2>
+                    <div class="centered-image">
+                        <img src="images/scp.png" alt="Single Cycle Processor">
+                    </div>
+                    <p class="project-description">
+                        Designed and implemented the datapath for a 5-stage single-cycle processor in Verilog, integrating key components such as the program counter, register file, ALU, and data & instruction memories. Developed a control unit to manage instruction execution across all stages, ensuring seamless operation through comprehensive control signals that handle data and control hazards. Created detailed testbenches for each stage, using waveform analysis to verify functionality. The processor reads instructions, distributes bytes to the register file, performs computations in the ALU, and accesses memory when necessary, with the program counter incrementing or branching based on instruction flow. 
+                        Attached below is the code for the single cycle processor.
+    
+                    </p>
+                    <div class="button-container">
+                        <a href="https://github.com/Giovanill/Ecen350-SingleCycleProc.git" class="view-more-button">Click to view code!</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h2>Project 4: Smart Robot Car</h2>
+                    <div class="centered-image">
+                        <img src="images/environmental_monitoring.jpg" alt="Home Automation System">
+                    </div>
+                    <p class="project-description">
+                        Designed and built a multi-deck robot car with DC motor control, incorporating path-following capabilities, user-defined speed and distance inputs, specified angle turns, and Bluetooth functionality for remote control. All aspects of the robot were programmed from scratch using an Arduino UNO microcontroller, with hardware purchased from Arduino.
+                    </p>
+                    <div class="button-container">
+                        <a href="project4-details.html" class="view-more-button">View More</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h2>Project 5: Home Automation System</h2>
+                    <div class="centered-image">
+                        <img src="images/environmental_monitoring.jpg" alt="Home Automation System">
+                    </div>
+                    <p class="project-description">
+                        Built an IoT-based system for real-time environmental monitoring, measuring parameters such as temperature, humidity, and air quality. The data is collected and visualized through a web interface, allowing for remote monitoring.
+                    </p>
+                    <div class="button-container">
+                        <a  class="view-more-button">Ongoing Project!</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>2024 website</p>
+    </footer>
+</body>
+
+</html>

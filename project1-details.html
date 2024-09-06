@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - [Project Title]</title>
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="aboutme.html">About Me</a>
+                </li>
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="contacts.html">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>MCU PCB Design</h1>
+
+        <section class="project-details">
+
+            <h2 class="section-header">Design Process</h2>
+            <p class="project-description">
+                The entire design process was carried out using Altium Designer. The initial step involved drafting the schematics for both the power supply and the microcontroller unit. The power supply schematic was created first and includes a battery and a voltage regulator section. The battery provides a 9V input to the system, which is regulated down to 3.3V by the voltage regulator. The regulator was designed using a custom component (U1), which models the Texas Instruments LM1117 low-dropout voltage regulator. Following Texas Instruments' system examples, the design incorporates a 10 µF and a 100 µF tantalum capacitor to ensure power regulation. The 100 µF capacitor was specifically chosen to stabilize the output voltage.
+            </p>
+
+            <div class="image-container">
+                <img src="images/p11.png" alt="Image 1 description">
+                <img src="images/voltageregulator.png" alt="Image 2 description">
+            </div>
+
+            <p>
+                The microcontroller schematic consists of sections for bypass capacitors, SWDIO/SWCLK pins, 8 MHz and 32 kHz crystals, reset and boot options, and pin header connections. The complete schematic, including all components, is shown below, alongside the documentation used as references. Details on each component's function will be expanded in later sections.
+
+            </p>
+
+            <div class="image-container">
+                <img src="images/mcu.png" alt="Image 1 description">
+                <img src="images/bypass.png" alt="Image 2 description">
+            </div>
+
+            <div class="image-container">
+                <img src="images/ct.png" alt="Image 1 description">
+                <img src="images/32ct.png" alt="Image 2 description">
+            </div>
+
+            <div class="image-container">
+                <img src="images/reset.png" alt="Image 1 description">
+                <img src="images/32ct.png" alt="Image 2 description">
+            </div>
+
+            <p>
+            Below, the final PCB layout before the polygon pour is shown, along with a 3D view of the board. The 3D models of the components were developed using Altium Designer.
+            </p>
+            <div class="image-container">
+                <img src="images/pcbb.png" alt="Image 1 description">
+                <img src="images/3dpcb.png" alt="Image 2 description">
+            </div>
+
+            <h2 class="section-header">Resources</h2>
+            <p class="resources-description">
+                <!-- List resources here, such as links to schematics, BOM, code, etc. -->
+            </p>
+        </section>
+    </section>
+    </main>
+
+    <footer>
+        <p>2024 website</p>
+    </footer>
+</body>
+
+</html>
