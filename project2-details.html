@@ -38,9 +38,7 @@
             <h1>FPGA System Design</h1>
         
         <section class="project-details">
-            <div class="centered-image">
-                <img src="images/[image-file].png" alt="[Project Title]">
-            </div>
+            
             <p class="project-description">
                 This project involved a 3 stage process which included testing the Altera DE-10 LITE board, designing a mixed signal system and eventually developing the hardware for a system on chip. All aspects of the project were completed using Intel's Quartus Prime.
                 The first part of the project involved basic setup and programming of the DE-10 LITE board, the board was set up using the DE-10 LITE system builder. Once the pin assignments were established, I developed two VHDL programming files to test the FPGA 
@@ -59,8 +57,7 @@
             <p class="project-description">
                 The next phase of the project involved designing a mixed-signal system and programming it onto the FPGA. This process included developing a pulse width modulation (PWM) system using a combination of a debouncer, a generator, and a phase-locked loop (PLL) component.
 
-The debouncer was implemented to clean up any noise or unintended multiple signals from mechanical switches, ensuring that only a single, clean pulse is generated when a switch is toggled. The generator was designed to produce the PWM signal, with its duty cycle being directly controlled by the state of the switches SW0-SW2 on the DE10-Lite board. Specifically, the combination of these three switches determines the duty cycle, with each switch contributing to the overall percentage of time the signal remains high during one PWM cycle. This allows for fine-tuned control of the output signal based on user input. The PLL (Phase-Locked Loop) was used to stabilize and synchronize the clock signals, ensuring that all components in the system operated cohesively and at the correct frequencies. The completed schematic is shown below.
-                </p>
+The debouncer was implemented to clean up any noise or unintended multiple signals from mechanical switches, ensuring that only a single, clean pulse is generated when a switch is toggled. The generator was designed to produce the PWM signal, with its duty cycle being directly controlled by the state of the switches SW0-SW2 on the DE10-Lite board. The combination of these three switches determines the duty cycle, with each switch contributing to the percentage of time the signal remains high during one PWM cycle. The PLL (Phase-Locked Loop) was used to stabilize and synchronize the clock signals, ensuring that all components in the system operated cohesively. Shown below is the completed PWM design programmed on the FPGA. In the image on the left the LEDR0 component is red when SW0-SW2 are all disabled. In the image on the right the LEDR0 compnent shines a brighter red due to all three switches being turned on.                </p>
 
                 <div class="image-container">
                     <img src="images/lowpwm.jpg" alt="Image 1 description">
@@ -69,7 +66,7 @@ The debouncer was implemented to clean up any noise or unintended multiple signa
                 <p>
 Once the PWM system was complete, I then developed an Analog to Digital Conversion (ADC) system using Quartus Platform Designer. In this stage, I integrated the ADC core, ALTPLL, JTAG to Avalon Bridge, and Avalon-MM pipeline bridge components. After configuring and assembling these components, an HDL file was generated to represent the system, accompanied by a block diagram for use in the schematic design.
 
-With the system now fully designed, the next step was to import the block diagram into the PWM schematic. The ADC components were then routed as shown in the schematic below, allowing for interfacing with the hex displays on the DE10-Lite board. The PWM signal, modulated by the input from SW0-SW2, is converted by the ADC and the corresponding output voltage is displayed on the HEX displays. This provides a visual representation of how the switch settings influence the voltage output.
+With the system now fully designed, the next step was to import the block diagram into the PWM schematic. The ADC components were then routed as shown in the schematic below, allowing for interfacing with the hex displays on the DE10-Lite board. The PWM signal, modulated by the input from SW0-SW2, is converted by the ADC and the corresponding output voltage is displayed on the HEX displays.
 
 Finally, the completed design was programmed and tested on the DE10-Lite Board. The system operates by reading the input voltage via a white jumper wire. The output voltage varies depending on the configuration of switches SW0-SW2, and the resulting voltage is clearly displayed on the HEX indicators.
 
@@ -83,23 +80,9 @@ Shown below is a picture of the working result.
             </div>
             
             <p>
-                The final part of the project focused on designing the hardware for a System on Chip (SoC). This process involved the integration of multiple essential components into a cohesive system, each playing a critical role in the overall functionality of the SoC. The key components included:
+                The final part of the project focused on designing the hardware for a System on Chip (SoC). This process involved the integration of multiple essential components into a cohesive system, each playing a critical role in the overall functionality of the SoC. 
             </p>
-            <ul class="project-description">
-                <li><strong>CLK_0 and ATLPLL:</strong> Generated the primary clock signals required for synchronizing all operations within the SoC. The ATLPLL (Altera Phase-Locked Loop) was responsible for ensuring that the clock signals were stable and met the timing requirements of the different modules.</li>
-                <li><strong>CLK1 and ATLPLL1:</strong> Managed a secondary clock domain, allowing for the integration of peripherals or subsystems that required different clock frequencies from the main system clock.</li>
-                <li><strong>Nios II Soft Processor:</strong> Served as the central processing unit (CPU) of the SoC, executing instructions, managing tasks, and coordinating the activities of the connected peripherals and memory.</li>
-                <li><strong>RAM and Flash Memory:</strong> Provided storage for the processor's instructions and data. RAM was used for volatile data storage, while Flash memory was utilized for non-volatile storage, such as firmware or application code.</li>
-                <li><strong>Avalon Clock Crossing Bridge:</strong> Facilitated communication between different clock domains within the SoC, ensuring data integrity when transferring information between components operating on different clock signals.</li>
-                <li><strong>PIO (Parallel Input/Output):</strong> Enabled the processor to interact with external devices through general-purpose input/output pins, allowing for flexible connection to sensors, actuators, or other peripherals.</li>
-                <li><strong>Interval Timer:</strong> Used for time-based operations within the SoC, such as generating interrupts at regular intervals or measuring time between events.</li>
-                <li><strong>SDRAM:</strong> Provided additional high-capacity, high-speed memory for the SoC, supporting more complex applications and data-intensive tasks.</li>
-                <li><strong>SPI (Serial Peripheral Interface):</strong> Facilitated communication with external serial devices, such as sensors, memory chips, or other microcontrollers, using the standard SPI protocol.</li>
-                <li><strong>ADC Core:</strong> Responsible for converting analog signals from external sensors or inputs into digital data that could be processed by the Nios II processor.</li>
-                <li><strong>JTAG to Avalon Master Bridge:</strong> Allowed for debugging and programming of the SoC through the JTAG interface, providing a way to communicate with the processor and other components over the Avalon bus during development.</li>
-                <li><strong>JTAG UART:</strong> Provided a simple communication interface between the SoC and a host computer, typically used for debugging and sending/receiving data during development.</li>
-                <li><strong>System ID Peripheral:</strong> Stored a unique identifier for the SoC design, ensuring that the correct firmware or software was loaded and helping to verify the integrity of the system during programming or debugging.</li>
-            </ul>
+         
             <p>
                 Once all these components were configured and connected within the Quartus Platform Designer, a separate HDL (Hardware Description Language) file was generated. This HDL file represented the entire SoC hardware configuration, ready to be synthesized, implemented, and programmed onto the FPGA. The HDL file not only defined the structure and interconnections of the components but also provided the necessary details for timing, resource allocation, and peripheral integration.
             </p>
